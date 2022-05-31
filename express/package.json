@@ -1,5 +1,5 @@
 {
-  "name": "express",
+  "name": "iniciando express",
   "version": "1.0.0",
   "description": "Iniciando com express",
   "main": "index.js",
@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Daniel Cunha",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
