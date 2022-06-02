@@ -6,6 +6,8 @@ PASSO 01: Instalar express pelo cmd:
 npm install express --save
 PASSO 02: instalar o EJS pelo cmd:
 npm install ejs --save
+PASSO 03: Rodando com Nodemon pelo cmd:
+npx nodemon index.js
 */
 
 const express = require("express");
