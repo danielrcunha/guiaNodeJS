@@ -17,17 +17,17 @@ const app = express();
 /*Estou dizendo para o express usar o EJS como view engine*/
 app.set('view engine', 'ejs');
 
-app.get("/", (req, res) => {
+app.get("/:nome/:lang", (req, res) => {
     /*criando parametros*/
-    var nome = "Daniel Cunha";
-    var lang = "Javascript";
+    var nome = req.params.nome;
+    var lang = req.params.lang;
 
     /*utilizando variaveis*/
     res.render("index", {
         nome: nome,
         lang: lang,
         empresa: "Guia do Programador",
-        incritos: 8000
+        inscritos: 8000
     });
 });
 
