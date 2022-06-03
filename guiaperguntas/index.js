@@ -13,8 +13,22 @@ npx nodemon index.js
 const express = require("express");
 const app = express();
 
+/*configurando EJS no express*/
+/*Estou dizendo para o express usar o EJS como view engine*/
+app.set('view engine', 'ejs');
+
 app.get("/", (req, res) => {
-    res.send("Bem-vindo ao meu site!");
+    /*criando parametros*/
+    var nome = "Daniel Cunha";
+    var lang = "Javascript";
+
+    /*utilizando variaveis*/
+    res.render("index", {
+        nome: nome,
+        lang: lang,
+        empresa: "Guia do Programador",
+        incritos: 8000
+    });
 });
 
 app.listen(8080, () => {
