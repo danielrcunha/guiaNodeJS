@@ -17,5 +17,12 @@
     <p>Empresa:<%= empresa %></p>
     <p>Inscritos:<%= inscritos%></p>
 
+    <% if(msg == true){ %>
+        <h3>ERRO</h3>
+    <%} else{
+        %><h3>Nenhum ERRO</h3><%
+    } %>
+    
+
 </body>
 </html>

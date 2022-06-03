@@ -6,7 +6,9 @@ PASSO 01: Instalar express pelo cmd:
 npm install express --save
 PASSO 02: instalar o EJS pelo cmd:
 npm install ejs --save
-PASSO 03: Rodando com Nodemon pelo cmd:
+PASSO 03: instalar o Nodemon
+
+PASSO 04: Rodando com Nodemon pelo cmd:
 npx nodemon index.js
 */
 
@@ -21,13 +23,15 @@ app.get("/:nome/:lang", (req, res) => {
     /*criando parametros*/
     var nome = req.params.nome;
     var lang = req.params.lang;
+    var exibirMsg = false;
 
     /*utilizando variaveis*/
     res.render("index", {
         nome: nome,
         lang: lang,
         empresa: "Guia do Programador",
-        inscritos: 8000
+        inscritos: 8000,
+        msg: exibirMsg
     });
 });
 
