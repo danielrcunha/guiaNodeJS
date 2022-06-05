@@ -25,13 +25,21 @@ app.get("/:nome/:lang", (req, res) => {
     var lang = req.params.lang;
     var exibirMsg = false;
 
+    /*ARRAY*/
+    var produtos = [
+        { nome: "Doritos", preco: 3.14 },
+        { nome: "Coca-cola", preco: 5 },
+        { nome: "Leite", preco: 1.45 }
+    ]
+
     /*utilizando variaveis*/
     res.render("index", {
         nome: nome,
         lang: lang,
         empresa: "Guia do Programador",
         inscritos: 8000,
-        msg: exibirMsg
+        msg: exibirMsg,
+        produtos: produtos
     });
 });
 
