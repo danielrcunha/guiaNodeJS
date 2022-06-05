@@ -29,7 +29,9 @@ app.get("/:nome/:lang", (req, res) => {
     var produtos = [
         { nome: "Doritos", preco: 3.14 },
         { nome: "Coca-cola", preco: 5 },
-        { nome: "Leite", preco: 1.45 }
+        { nome: "Leite", preco: 1.45 },
+        { nome: "Carne", preco: 15.45 },
+        { nome: "Queijo", preco: 19.45 }
     ]
 
     /*utilizando variaveis*/
