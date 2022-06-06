@@ -18,6 +18,8 @@ const app = express();
 /*configurando EJS no express*/
 /*Estou dizendo para o express usar o EJS como view engine*/
 app.set('view engine', 'ejs');
+app.use(express.static('public'));/*arquivos estaticos*/
+
 
 app.get("/:nome/:lang", (req, res) => {
     /*criando parametros*/
