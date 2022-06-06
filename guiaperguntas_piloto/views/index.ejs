@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Perguntas</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <img src="/img/git card.jpg" alt="">
+    <h1>Guia Perguntas</h1>
+    <hr>
+    <h3>Lista de Perguntas</h3>
+
+    <!--Utilizando a variavel -->
+    <p>Nome:<%= nome %></p>
+    <p>Linguagem:<%= lang %></p>
+    <p>Empresa:<%= empresa %></p>
+    <p>Inscritos:<%= inscritos%></p>
+
+    <% if(msg == true){ %>
+        <h3>ERRO</h3>
+    <%} else{
+        %><h3>Nenhum ERRO</h3><%
+    } %>
+
+    <!--FOREACH :: PARA CADA-->
+    <% produtos.forEach(function(produto){ %>
+        <br>
+        <%= produto.nome %>
+        <%= produto.preco %>
+    <%})%>
+    
+
+</body>
+</html>

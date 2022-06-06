@@ -21,30 +21,13 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));/*arquivos estaticos*/
 
 
-app.get("/:nome/:lang", (req, res) => {
-    /*criando parametros*/
-    var nome = req.params.nome;
-    var lang = req.params.lang;
-    var exibirMsg = false;
+app.get("/", (req, res) => {
 
-    /*ARRAY*/
-    var produtos = [
-        { nome: "Doritos", preco: 3.14 },
-        { nome: "Coca-cola", preco: 5 },
-        { nome: "Leite", preco: 1.45 },
-        { nome: "Carne", preco: 15.45 },
-        { nome: "Queijo", preco: 19.45 }
-    ]
+
+
 
     /*utilizando variaveis*/
-    res.render("index", {
-        nome: nome,
-        lang: lang,
-        empresa: "Guia do Programador",
-        inscritos: 8000,
-        msg: exibirMsg,
-        produtos: produtos
-    });
+    res.render("index")
 });
 
 app.listen(8080, () => {

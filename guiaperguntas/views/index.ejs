@@ -6,32 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia Perguntas</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/guiaperguntas/public/css/bootstrap-grid.min.css">
 </head>
 <body>
-    <img src="/img/git card.jpg" alt="">
-    <h1>Guia Perguntas</h1>
-    <hr>
-    <h3>Lista de Perguntas</h3>
-
-    <!--Utilizando a variavel -->
-    <p>Nome:<%= nome %></p>
-    <p>Linguagem:<%= lang %></p>
-    <p>Empresa:<%= empresa %></p>
-    <p>Inscritos:<%= inscritos%></p>
-
-    <% if(msg == true){ %>
-        <h3>ERRO</h3>
-    <%} else{
-        %><h3>Nenhum ERRO</h3><%
-    } %>
-
-    <!--FOREACH :: PARA CADA-->
-    <% produtos.forEach(function(produto){ %>
-        <br>
-        <%= produto.nome %>
-        <%= produto.preco %>
-    <%})%>
-    
+    <h1>Estilo bootstrap</h1>
 
 </body>
+<!--IMPORTANDO O JQUERT E O CLOUDFLARE-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+<script src="/guiaperguntas/public/js/bootstrap.min.js"></script>
 </html>
