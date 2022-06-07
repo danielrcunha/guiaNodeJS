@@ -22,13 +22,12 @@ app.use(express.static('public'));/*arquivos estaticos*/
 
 
 app.get("/", (req, res) => {
-
-
-
-
-    /*utilizando variaveis*/
     res.render("index")
 });
+
+app.get("/perguntar", (req, res) => {
+    res.render("perguntar"); /*vai renderizar um html, quer dizer, vai retornar*/
+})
 
 app.listen(8080, () => {
     console.log("app guia perguntas e resposta rodado!");
