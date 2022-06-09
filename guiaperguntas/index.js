@@ -27,7 +27,12 @@ app.get("/", (req, res) => {
 
 app.get("/perguntar", (req, res) => {
     res.render("perguntar"); /*vai renderizar um html, quer dizer, vai retornar*/
-})
+});
+
+/*usando o post*/
+app.post("/salvarpergunta", (req, res) => {
+    res.send("Formulario recebido")
+});
 
 app.listen(8080, () => {
     console.log("app guia perguntas e resposta rodado!");
