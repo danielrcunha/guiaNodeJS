@@ -20,11 +20,11 @@ const connection = require('./database/database');
 //database
 connection.authenticate()
     .then(() => {
-        console.log("Conexão feita com o BD!")
+        console.log("Conexão feita com o BD!");
     })
-    .catch((msgErro) => {
-        console.log(msgErro)
-    })
+    .catch((msgErro => {
+        console.log(msgErro);
+    }));
 
 /*configurando EJS no express*/
 /*Estou dizendo para o express usar o EJS como view engine*/
@@ -53,3 +53,4 @@ app.listen(8080, () => {
     console.log("app guia perguntas e resposta rodado!");
 });
 
+//

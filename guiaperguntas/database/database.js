@@ -5,5 +5,4 @@ const connection = new Sequelize('guiaperguntas', 'root', 'root', {
     dialect: 'mysql'
 });
 
-/*exportanto a conecxão*/
 module.exports = connection;
