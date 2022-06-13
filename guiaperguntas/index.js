@@ -7,9 +7,9 @@ npm install express --save
 PASSO 02: instalar o EJS pelo cmd:
 npm install ejs --save
 PASSO 03: instalar o Nodemon
-
 PASSO 04: Rodando com Nodemon pelo cmd:
 npx nodemon index.js
+PASSO 05: Instalar no projeto: npm install sequelize
 */
 
 const express = require("express");
