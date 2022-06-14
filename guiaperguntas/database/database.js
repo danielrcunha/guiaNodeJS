@@ -2,7 +2,8 @@
 const Sequelize = require('sequelize');
 const connection = new Sequelize('guiaperguntas', 'root', 'root', {
     host: 'localhost',
-    dialect: 'mysql'
+    dialect: 'mysql',
+
 });
 
 module.exports = connection;

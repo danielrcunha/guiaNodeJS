@@ -6,7 +6,7 @@ PASSO 01: Instalar express pelo cmd:
 npm install express --save
 PASSO 02: instalar o EJS pelo cmd:
 npm install ejs --save
-PASSO 03: instalar o Nodemon
+PASSO 03: instalar o Nodemon npm install nodemon -g
 PASSO 04: Rodando com Nodemon pelo cmd:
 npx nodemon index.js
 PASSO 05: Instalar no projeto: npm install sequelize
@@ -15,16 +15,17 @@ PASSO 05: Instalar no projeto: npm install sequelize
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const connection = require('./database/database');
+const connection = require("./database/database");
+const perguntaModel = require("./database/Pergunta");
 
 //database
 connection.authenticate()
     .then(() => {
         console.log("Conexão feita com o BD!");
     })
-    .catch((msgErro => {
+    .catch((msgErro) => {
         console.log(msgErro);
-    }));
+    });
 
 /*configurando EJS no express*/
 /*Estou dizendo para o express usar o EJS como view engine*/
