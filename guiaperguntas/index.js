@@ -16,7 +16,13 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const connection = require("./database/database");
-const perguntaModel = require("./database/Pergunta");
+
+/*importando a variavel Pergunta de Pergunta.js*/
+const Pergunta = require("./database/Pergunta");
+
+
+
+
 
 //database
 connection.authenticate()
@@ -47,7 +53,15 @@ app.get("/perguntar", (req, res) => {
 
 /*usando o post*/
 app.post("/salvarpergunta", (req, res) => {
-    res.send("Formulario recebido")
+    var titulo = req.body.titulo;
+    var descricao = req.body.descricao;
+
+    Pergunta.create({
+        titulo: titulo,
+        descricao: descricao
+    }).then(() => {
+        res.redirect("/"); /*após salvar redireciona para /*/
+    });
 });
 
 app.listen(8080, () => {

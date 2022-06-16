@@ -1,6 +1,8 @@
 //Model iniciam com letra maiuscula(boa pratica)
 const Sequelize = require("sequelize");
-const connection = require("./database")
+const connection = require("./database");
+
+
 
 //definindo model
 //craindo uma TB usando sequelize
@@ -15,5 +17,8 @@ const Pergunta = connection.define('perguntas', {
     }
 });
 
-//sincroniza o que está no BD
+//sincroniza o que está no BD para criar a TB
 Pergunta.sync({ force: false }).then(() => { });
+
+/*exportando a variavel Pergunta*/
+module.exports = Pergunta;
