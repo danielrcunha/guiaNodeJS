@@ -21,9 +21,6 @@ const connection = require("./database/database");
 const Pergunta = require("./database/Pergunta");
 
 
-
-
-
 //database
 connection.authenticate()
     .then(() => {
