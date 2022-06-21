@@ -41,7 +41,11 @@ app.use(bodyParser.json());
 
 //ROTAS
 app.get("/", (req, res) => {
-    res.render("index")
+    Pergunta.findAll({ raw: true }).then(perguntas => {/*NEW*/
+        res.render("index", {/*NEW*/
+            perguntas: perguntas/*NEW*/ /*Criando uma variavel perguntas para receber as perguntas do BD*/
+        })/*NEW*/
+    });
 });
 
 app.get("/perguntar", (req, res) => {
