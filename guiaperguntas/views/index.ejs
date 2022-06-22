@@ -1,6 +1,14 @@
 <%- include('./partials/header.ejs') %>
 <body>
     <%- include('./partials/navbar.ejs') %>
+
+    <div>
+        <!--estrutura do ForEach-->
+        <% perguntas.forEach(pergunta => {%>
+            <p><%= pergunta.titulo %></p>
+        <% })%>
+    </div>
+
     <h1>Estilo bootstrap</h1>
     <div class="card-body">
         <form action="/perguntar">
