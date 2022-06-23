@@ -41,10 +41,14 @@ app.use(bodyParser.json());
 
 //ROTAS
 app.get("/", (req, res) => {
-    Pergunta.findAll({ raw: true }).then(perguntas => {/*NEW*/
-        res.render("index", {/*NEW*/
-            perguntas: perguntas/*NEW*/ /*Criando uma variavel perguntas para receber as perguntas do BD*/
-        })/*NEW*/
+    Pergunta.findAll({
+        raw: true,
+        order: [['id', 'desc'] /*ordenando pelo ID decrescente*/
+        ]
+    }).then(perguntas => {
+        res.render("index", {
+            perguntas: perguntas /*Criando uma variavel perguntas para receber as perguntas do BD*/
+        })
     });
 });
 
@@ -63,6 +67,21 @@ app.post("/salvarpergunta", (req, res) => {
         res.redirect("/"); /*após salvar redireciona para /*/
     });
 });
+
+/*rota p/ pagina de pergunta*/ //NEW NEW NEW
+app.get("/pergunta/:id", (req, res) => {
+    var id = req.params.id;
+    Pergunta.findOne({ //modelo.primeiraLinha
+        where: { id: id } //onde id=id
+    }).then(pergunta => {
+        if (pergunta != undefined) {//pergunta encontrada
+            res.render("pergunta");
+        } else {//pergunta ñ encontrada
+            res.redirect("/");
+        }
+    });
+});
+
 
 app.listen(8080, () => {
     console.log("app guia perguntas e resposta rodado!");
