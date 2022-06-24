@@ -19,6 +19,7 @@ const connection = require("./database/database");
 
 /*importando a variavel Pergunta de Pergunta.js*/
 const Pergunta = require("./database/Pergunta");
+const Resposta = require("./database/Resposta");
 
 
 //database
